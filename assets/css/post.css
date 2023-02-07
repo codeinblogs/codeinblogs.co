@@ -1,0 +1,48 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.accent {
+  background-color: hsl(218, 23%, 23%);
+}
+
+.action-primary {
+  background-color: hsl(218, 23%, 19%);
+}
+
+.foreground-secondary {
+  background-color: hsl(211, 25%, 84%);
+}
+
+.shadow-div {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.poppins {
+  font-family: "Poppins";
+}
+
+button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #0cf;
+  color: #fff;
+  margin: 30px 0 5px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 30px;
+}
+
+button[type="submit"]:hover {
+  background: #2d3748;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post your Article</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/post.css">
+    <meta name="title" content="Create new post on CodeIN Blogs">
+    <meta name="description"
+        content="It is a blogging platform that allows users to write and publish articles on a wide range of topics where you can write easily.">
+    <meta name="keywords" content="Coding blog,blogging website,code,websites,Kushagra,Anshul ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Anshul Soni,Kushagra Pandey">
+    <meta property="og:image"
+        content="https://img.freepik.com/premium-vector/new-post-social-media-buttons-neon-icon-vector-stock-illustration_100456-3483.jpg" />
+</head>
+
+<body class="accent">
+
+    <div class="my-20 w-full h-full flex justify-center items-center text-white">
+        <div class="mx-4 pt-12 pb-6 px-6 min-w-[200px] max-w-[600px] action-primary rounded-2xl shadow-lg">
+            <form id="post-form" action="https://getform.io/f/99265d97-98a5-4f3e-983e-351dff65d577"
+                method="POST" onsubmit="onSubmit()">
+                <h3 class="text-center text-3xl font-[Montserrat] font-medium">Post New Article</h3>
+
+
+                <!--       Name for author↓ -->
+
+                <input class="mt-6 px-4 text-lg accent w-full h-[50px] rounded-xl" type="text" placeholder="Name"
+                    required name="Author Name">
+                <input class="mt-6 px-4 text-lg accent w-full h-[50px] rounded-xl" type="email" placeholder="Email"
+                    required name="Author Email">
+                <input class="mt-6 px-4 text-lg accent w-full h-[50px] rounded-xl" type="url"
+                    placeholder="add your any profile link (optional)" name="Author Profile Link">
+                <input class="mt-6 px-4 text-lg accent w-full h-[50px] rounded-xl" type="text"
+                    placeholder="Article Name" name="Article Name" required>
+                <textarea id="message" rows="4"
+                    class="block p-2.5 w-full mt-6 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-900 rounded-xl dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    placeholder="Write your Article here..." name="article"></textarea>
+
+                <input class="mt-6 px-4 text-lg accent w-full  h-[50px] rounded-xl" type="text"
+                    placeholder="Article Category" name="Article Category" required>
+                <div class="mt-6  flex flex-col justify-center  accent w-full h-[100px] px-4 text-lg   rounded-xl">
+                    <h1 class="font-[Montserrat] mb-1 ">Upload your cover image(Optional)
+                    </h1>
+                    <input type="file" placeholder="Upload your article cover image" name="Cover of Article">
+                </div>
+
+                <button name="submit" type="submit" id="post-form-submit" data-submit="...Sending">Submit</button>
+                <div class="flex justify-center items-center">
+                    <h5 class="text-center  w-[300px] mt-6 font-[Montserrat]">Our team will review your article within
+                        24
+                        hours</h5>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        function onSubmit() {
+            window.open("post.html")
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0MY5S80CVP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-0MY5S80CVP');
+    </script>
+</body>
+
+</html>

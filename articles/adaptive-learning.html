@@ -1,0 +1,274 @@
+<!--Link- https://web.dev/adaptive-loading-cds-2019/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="CodeIN Blogs">
+    <meta name="description"
+        content="It is a blogging platform that allows users to write and publish articles on a wide range of topics where you can write easily.">
+    <meta name="keywords"
+        content="CodeIN Blogs,codein blog,Blog of codding,Coding blog,blogging website,code,websites,Kushagra,Anshul ">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="author" content="Anshul Soni, Kushagra Pandey">
+    <link href="blog.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../assets/logos/bulb with lines.svg">
+
+    <link rel="stylesheet" href="blog.css">
+
+    <title>Adaptive loading: improving web performance on slow devices - CodeIN Blogs </title>
+</head>
+
+<body>
+    <main class="w-full h-full flex flex-col items-center justify-center accent text-white py-10 px-6">
+        <!-- Header -->
+        <h2 class=" text-2xl sm:text-3xl md:text-1xl  font-semibold text-center ">Adaptive loading: improving web
+            performance on slow devices</h2>
+        <div class="author flex mt-4">
+            <div>
+                <img class="w-[50px] h-[50px]  rounded-full" src="../assets/images/author1.png">
+            </div>
+            <div class="flex flex-col text-sm justify-center mx-2 font-medium">
+                <h1>Anshul Soni</h1>
+                <p>Jan 27, 2023
+                </p>
+            </div>
+        </div>
+
+        <div class="my-6 w-[300px] h-1 foreground-secondary rounded-lg"></div>
+
+        <div class="lg:flex">
+
+            <div class="w-full lg:w-[750px] lg:mr-16">
+                <!-- Overview of the post -->
+
+                <div class="overview">
+
+
+                    <p class="text-lg md:text-xl font-normal poppins">Device capabilities and network connections vary a
+                        lot. Sites that delight users on high-end devices can be unusable on low-end ones. Sites that
+                        load smoothly on fast networks can come to a halt on slow ones. Any user can experience a slow
+                        website, that's why developing "one-size fits all" solutions may not always work.
+                        <br> <br>
+
+                        In their <a href="https://www.youtube.com/watch?v=puUPpVrIRkc"><u>Chrome Dev Summit
+                                talk</u></a>, Addy Osmani from Google and Nate Schloss from Facebook explore a solution
+                        to that problem—a pattern for delivering pages that better cater to a variety of user
+                        constraints. They call it <b>adaptive loading</b>.
+                    </p>
+                </div>
+
+                <!-- Main post starts -->
+
+                <div class="main-content "></div>
+
+                <div class="mt-6 section">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl font-semibold ">What is adaptive loading?
+
+
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins"> <span class="font-medium">
+
+                            Adaptive loading involves delivering different experiences to different users based on their
+                            network and hardware constraints, specifically: <br> <br>
+
+                            <ul class="text-lg md:text-xl font-normal poppins">
+                                <li>• A fast core experience for all users (including low-end devices).
+
+                                </li>
+                                <li>•Progressively adding high-end-only features, if a user's network and hardware can
+                                    handle it.
+
+                                </li>
+                            </ul>
+
+
+                        </span>
+
+
+
+                    </p>
+
+
+                </div>
+                <div class="mt-6 section">
+                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold">
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
+
+
+                        By optimizing for specific hardware and network constraints you enable every user to get the
+                        best possible experience for their device. Tailoring the experience to users' constraints can
+                        include: <br> <br>
+
+                    <ul class="text-lg md:text-xl font-normal poppins">
+                        <li>•Serving low-quality images and videos on slow networks.</li>
+                        <li>•Avoiding computationally expensive operations on low-end devices.</li>
+                        <li>•Blocking third-party scripts on slower devices.</li>
+                        <li>•Loading non-critical JavaScript for interactivity only on fast CPUs.
+
+                        </li>
+                        <li>•Throttling the frame-rate of animations on low-end devices.
+
+                        </li>
+
+                    </ul> <br> <br>
+
+
+                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold">Browser support and how to
+                        implement adaptive loading
+                    </h1>
+                    <br>
+
+
+                    <p class="mt-4 text-lg md:text-xl font-normal poppins">
+                        The signals you can use for adaptive loading are listed below. Browser support is also included
+                        for each signal:
+                    </p>
+
+                    <br> <br>
+
+                    <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold">Navigator.deviceMemory h1>
+
+                        <br>
+                        <p class="mt-4 text-lg md:text-xl font-normal poppins">The <u
+                                style="color:blueviolet; background: rgb(23, 22, 22)"> <a
+                                    href="https://developer.mozilla.org/docs/Web/API/Navigator/deviceMemory">navigator.deviceMemory</a>
+                            </u> property is used to reduce memory consumption on low-end devices. <br> <br>
+
+                            Browser support: <b style="color: blueviolet; background: rgb(23,22,22)"><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory#browser_compatibility">Source</a></b>
+                            <img src="https://cdn.discordapp.com/attachments/1052532080589946892/1063716822911828048/image.png"
+                                alt="" srcset="">
+                        </p> <br><br>
+
+                        <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold">
+                            Navigator.hardwareConcurrency
+                        </h1>
+
+                        <br> <br>
+                        <p class="mt-4 text-lg md:text-xl font-normal poppins">
+                            The <u style="color:blueviolet; background: rgb(23, 22, 22)"><a
+                                    href="">navigator.hardwareConcurrency</a></u> property is the CPU core count. It is
+                            used to limit costly JavaScript execution and reduce CPU intensive logic when a device can't
+                            handle it well.
+                            <br> <br>
+                            Browser Support: <b style="color: blueviolet; background: rgb(23,22,22)"><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory#browser_compatibility">Source</a></b><img
+                                src="https://cdn.discordapp.com/attachments/1052532080589946892/1064520566880604260/image.png"
+                                alt="">
+                        </p>
+
+
+                        <br><br>
+                        <h1 class="text-xl sm:text-2xl md:text-3xl xl:text-4xl  font-semibold">
+                            NetworkInformation.effectiveType
+                        </h1>
+                        <p class="mt-4 text-lg md:text-xl font-normal poppins">The <u
+                                style="color:blueviolet; background: rgb(23, 22, 22)"><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/API/NetworkInformation/effectiveType">navigator.connection.effectiveType</a></u>
+                            property is used to fine-tune data transfer to use less bandwidth.
+                            <br> <br> Browser Support: <b style="color: blueviolet; background: rgb(23,22,22)"><a
+                                    href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/deviceMemory#browser_compatibility">Source</a></b><img
+                                src="https://cdn.discordapp.com/attachments/1052532080589946892/1064522245264916500/image.png"
+                                alt="">
+                        </p>
+
+
+                        <br> <br>
+                        <b>
+                            THANKS FOR READING IT, <br>
+                            CodeIN BLOGS
+                        </b>
+                        <br> <br>
+                        <br>
+                        <center><button class="view-full">View Full Article</button></center>
+                </div>
+            </div>
+
+
+            <div class="mt-10 lg:-mt-5 more-articles items-center">
+                <h1 class="my-4 text-3xl font-bold text-center">More Articles
+
+                </h1>
+
+
+
+                <div
+                    class=" carousel owl-carousel flex flex-wrap items-center justify-center lg:flex-nowrap lg:flex-col  text-center mx-auto">
+                    <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl ">
+
+                        <img class="w-[250px] h-[150px] object-cover"
+                            src="https://2823d438-9de1-490e-9027-772b6790330d.id.repl.co/assets/images/blog-4.png"
+                            alt="">
+                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">What
+                            is
+                            Machine
+                            Learning ?
+                        </div>
+                        <button class="view-more" role="button">
+                            <a href="articles/blog1.html">View Full Article</a>
+                        </button>
+
+                    </div>
+
+                    <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl">
+
+                        <img class="w-[250px] h-[150px] object-cover"
+                            src="https://2823d438-9de1-490e-9027-772b6790330d.id.repl.co/assets/images/blog-4.png"
+                            alt="">
+                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">What
+                            is
+                            Machine
+                            Learning ?
+                        </div>
+                        <button class="view-more" role="button">
+                            <a href="articles/blog1.html">View Full Article</a>
+                        </button>
+
+                    </div>
+                    <div class=" w-[275px] mb-10 card card-1 flex flex-col items-center my-4 py-3 shadow-2xl">
+
+                        <img class="w-[250px] h-[150px] object-cover"
+                            src="https://2823d438-9de1-490e-9027-772b6790330d.id.repl.co/assets/images/blog-4.png"
+                            alt="">
+                        <div class="title font-semibold text-[22px] m-4 hover:underline font-[Montserrat]">What
+                            is
+                            Machine
+                            Learning ?
+                        </div>
+                        <button class="view-more" role="button">
+                            <a href="articles/blog1.html">View Full Article</a>
+                        </button>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer
+        class="foreground-primary w-full py-10  flex justify-between items-center  px-8 gap-6 md:px-12 xl:px-36 2xl:px-44">
+        <h1 class="text-white text-xl font-semibold">&copy;CodeINBlogs 2022</h1>
+        <p class="text-gray-200 text-[12px] md:text-[17px] font-[Montserrat] ">Have any query? <br> Email us:
+            <a
+                href="mailto:codeinblogs@gmail.com?cc=anshulsoni2022@gmail.com&bcc=school.kushagra178@gmail.com&subject=I%20have%20an%20Query">codeinblogs@gmail.com</a>
+        </p>
+    </footer>
+
+
+
+</body>
+
+</html>
